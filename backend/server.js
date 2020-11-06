@@ -8,7 +8,7 @@ dotenv.config()
 const app = express()
 
 app.get("/", (req, res) => {
-    res.send("API is running...")
+    res.send("API is running...!!!")
 })
 
 app.get("/api/products", (req, res) => {
