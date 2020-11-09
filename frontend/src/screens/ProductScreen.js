@@ -6,6 +6,7 @@ import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
+import { clearProductDetails, listProductDetails } from "../store/actions/productActions"
 
 
 const ProductScreen = ({ match }) => {
