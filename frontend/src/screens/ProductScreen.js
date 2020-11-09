@@ -19,7 +19,7 @@ const ProductScreen = ({ match }) => {
     dispatch(listProductDetails(match.params.id))
 
     return () => {
-      // this make sure the product state is empty after the page has left
+      // this make sure the product state is empty after the page has been left
       dispatch(clearProductDetails());
     };
   }, [dispatch, match])
