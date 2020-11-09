@@ -12,7 +12,6 @@ const products = [
       numReviews: 12,
     },
     {
-      _id: "2",
       name: "iPhone 11 Pro 256GB Memory",
       image: "/images/phone.jpg",
       description:
@@ -25,7 +24,6 @@ const products = [
       numReviews: 8,
     },
     {
-      _id: "3",
       name: "Cannon EOS 80D DSLR Camera",
       image: "/images/camera.jpg",
       description:
