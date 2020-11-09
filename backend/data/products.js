@@ -36,7 +36,6 @@ const products = [
       numReviews: 12,
     },
     {
-      _id: "4",
       name: "Sony Playstation 4 Pro White Version",
       image: "/images/playstation.jpg",
       description:
@@ -49,7 +48,6 @@ const products = [
       numReviews: 12,
     },
     {
-      _id: "5",
       name: "Logitech G-Series Gaming Mouse",
       image: "/images/mouse.jpg",
       description:
