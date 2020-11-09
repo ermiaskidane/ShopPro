@@ -8,9 +8,8 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { clearProductDetails, listProductDetails } from "../store/actions/productActions"
 
-
 const ProductScreen = ({ match }) => {
-   const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const productDetails = useSelector(state => state.productDetails)
   const { loading, error, product } = productDetails
@@ -19,7 +18,7 @@ const ProductScreen = ({ match }) => {
     dispatch(listProductDetails(match.params.id))
 
     return () => {
-      // this make sure the product state is empty after the page has been left
+      // this make sure the product state is empty after the page has left
       dispatch(clearProductDetails());
     };
   }, [dispatch, match])
@@ -29,6 +28,10 @@ const ProductScreen = ({ match }) => {
       <Link className="btn btn-light my-3" to="/">
         Go Back
       </Link>
+
+      {loading ? <Loader/> : 
+      error ? 
+      <Message variant="danger">{error}</Message> :
 
       <Row>
         <Col md={6}>
@@ -84,8 +87,9 @@ const ProductScreen = ({ match }) => {
             </ListGroup>
           </Card>
         </Col>
-      </Row>
-    </>
+    </Row>
+  }
+ </>
   );
 };
 
