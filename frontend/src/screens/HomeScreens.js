@@ -7,19 +7,12 @@ import Product from "../components/Product";
 import Message from "../components/Message"
 import Loader from "../components/Loader"
 
+import { listProducts } from "../store/actions/productActions"
 
 const HomeScreens = () => {
-const [products, setProducts] = useState([]);
 
-useEffect(() => {
-  const fetchProducts = async () => {
-    const { data} = await axios.get("/api/products")
 
-    setProducts(data)
-  }
 
-  fetchProducts()
-}, [])
   return (
     <>
       <Row>
