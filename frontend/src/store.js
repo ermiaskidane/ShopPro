@@ -6,7 +6,8 @@ import { cartReducer } from "./store/reducers/cartReducers"
  
 const reducer = combineReducers({
     productList: productListReducer,
-    productDetails: productDetailsReducer
+    productDetails: productDetailsReducer,
+    cart: cartReducer
 })
 
 const initialState = {}
