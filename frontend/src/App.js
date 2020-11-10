@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeScreens from "./screens/HomeScreens";
 import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen"
 
 const App = () => {
   return (
