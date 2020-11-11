@@ -13,6 +13,9 @@ connectDB()
 
 const app = express()
 
+// to access json format in the req.body
+app.use(express.json())
+
 app.get("/", (req, res) => {
     res.send("API is running...!!!")
 })
