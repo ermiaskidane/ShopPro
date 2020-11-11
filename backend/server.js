@@ -13,11 +13,11 @@ connectDB()
 
 const app = express()
 
-// help to access json format in the req.body
+// to access json format in the req.body
 app.use(express.json())
 
 app.get("/", (req, res) => {
-    res.send("API is running...!!!")
+    res.send("API is running...")
 })
 
 app.use("/api/products", productRoutes)
