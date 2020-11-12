@@ -73,4 +73,8 @@ const LoginScreen = ({ location, history }) => {
   )
 }
 
+<<<<<<< HEAD
 export default LoginScreen
+=======
+export default LoginScreen
+>>>>>>> 07AuthFrontEnd

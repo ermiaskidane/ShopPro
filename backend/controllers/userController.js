@@ -109,4 +109,8 @@ const updateUserProfile = asyncHandler(async(req, res) => {
     }
 })
 
+<<<<<<< HEAD
 export  { authUser, registerUser, getUserProfile, updateUserProfile }
+=======
+export  { authUser, registerUser, getUserProfile, updateUserProfile }
+>>>>>>> 07AuthFrontEnd
