@@ -24,9 +24,6 @@ const ProfileScreen = ({ location, history }) => {
   const userUpdateProfile = useSelector((state) => state.userUpdateProfile)
   const { success } = userUpdateProfile
 
-//   const orderListMy = useSelector((state) => state.orderListMy)
-//   const { loading: loadingOrders, error: errorOrders, orders } = orderListMy
-
   useEffect(() => {
       // if no logged in
     if (!userInfo) {
