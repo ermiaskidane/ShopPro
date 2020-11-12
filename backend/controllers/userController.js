@@ -58,7 +58,7 @@ const registerUser = asyncHandler(async(req, res) => {
         res.status(400)
         throw new Error("Invalid user data")
     }
-})
+}) 
 
 // @desc    Get user profile
 // @route   GET /api/users/profile
@@ -79,6 +79,7 @@ const getUserProfile = asyncHandler(async(req, res) => {
     }
     // res.send("success")
 })
+
 
 // @desc    Update user profile
 // @route   PUT /api/users/profile
@@ -108,4 +109,4 @@ const updateUserProfile = asyncHandler(async(req, res) => {
     }
 })
 
-export  { authUser, registerUser, getUserProfile }
+export  { authUser, registerUser, getUserProfile, updateUserProfile }
