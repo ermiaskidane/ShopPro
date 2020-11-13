@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes)
 app.use("/api/users", userRoutes)
+app.use("/api/orders", orderRoutes)
 
 // // Custom Error Handler for Routes does not exist
 app.use(notFound);
