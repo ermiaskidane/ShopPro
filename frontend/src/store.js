@@ -2,14 +2,15 @@ import { createStore, combineReducers, applyMiddleware } from "redux"
 import thunk from "redux-thunk"
 import { composeWithDevTools } from "redux-devtools-extension"
 import { productListReducer, productDetailsReducer } from "./store/reducers/productReducers"
-import { cartReducer } from "./store/reducers/cartReducers"
+import { cartReducer } from "./store/reducers/cartReducers"  
 import { 
     userLoginReducer, 
     userRegisterReducer, 
     userDetailsReducer,
     userUpdateProfileReducer
 } from "./store/reducers/userReducers"
-
+import { orderCreateReducer } from "./store/reducers/orderReducers"
+ 
 const reducer = combineReducers({
     productList: productListReducer,
     productDetails: productDetailsReducer,
@@ -17,7 +18,8 @@ const reducer = combineReducers({
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer,
     userDetails: userDetailsReducer,
-    userUpdateProfile: userUpdateProfileReducer
+    userUpdateProfile: userUpdateProfileReducer,
+    orderCreate: orderCreateReducer
 })
 
 const cartItemsFromStorage = localStorage.getItem("cartItems") ? 
@@ -25,14 +27,25 @@ const cartItemsFromStorage = localStorage.getItem("cartItems") ?
 
 const userInfoFromStorage = localStorage.getItem("userInfo") ? 
     JSON.parse(localStorage.getItem("userInfo")) : null
+
+const shippingAddressFromStorage = localStorage.getItem("shippingAddress") ? 
+    JSON.parse(localStorage.getItem("shippingAddress")) : {}
  
 const initialState = {
+<<<<<<< HEAD
 <<<<<<< HEAD
     cart: { cartItems: cartItemsFromStorage }
 =======
     cart: { cartItems: cartItemsFromStorage},
     userLogin: { userInfo: userInfoFromStorage }
 >>>>>>> 07AuthFrontEnd
+=======
+    cart: { 
+        cartItems: cartItemsFromStorage, 
+        shippingAddress: shippingAddressFromStorage 
+    },
+    userLogin: { userInfo: userInfoFromStorage },
+>>>>>>> 08checkout1
 }
 
 const middleware = [thunk]
