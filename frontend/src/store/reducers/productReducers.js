@@ -7,7 +7,7 @@ import {
     PRODUCT_DETAILS_FAIL,
     CLEAR_PRODUCT_DETAILS
 } from "../constants/productConstants"
- 
+
 export const productListReducer = (state = { products: []}, action) => {
     switch (action.type) {
         case PRODUCT_LIST_REQUEST:
