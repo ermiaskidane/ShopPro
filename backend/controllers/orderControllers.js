@@ -39,13 +39,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
   }
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export { addOrderItems }
-=======
-export { addOrderItems }
->>>>>>> 8e55bdc4dbe329154d02e56d448f28ecaad8a699
-=======
 // @desc    Get order by ID
 // @route   GET /api/orders/:id
 // @access  Private
@@ -96,4 +89,3 @@ const getMyOrders = asyncHandler(async (req, res) => {
 })
 
 export { addOrderItems, getOrderById, updateOrderToPaid, getMyOrders }
->>>>>>> 09checkout2AndAdminPart1

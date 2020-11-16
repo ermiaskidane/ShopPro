@@ -109,13 +109,6 @@ const updateUserProfile = asyncHandler(async(req, res) => {
     }
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export  { authUser, registerUser, getUserProfile, updateUserProfile }
-=======
-export  { authUser, registerUser, getUserProfile, updateUserProfile }
->>>>>>> 07AuthFrontEnd
-=======
 // @desc    Get all users
 // @route   GET /api/users
 // @access  private/Admin
@@ -182,4 +175,3 @@ const updateUser = asyncHandler(async(req, res) => {
 })
   
 export  { authUser, registerUser, getUserProfile, updateUserProfile, getUsers, deleteUser, getUserById, updateUser}
->>>>>>> 09checkout2AndAdminPart1
