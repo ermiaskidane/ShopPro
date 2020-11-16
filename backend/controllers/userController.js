@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler"
 import generateToken from "../utilis/generateToken.js"
 import User from "../models/userModel.js"
-
+ 
 // @desc    Auth user & get token
 // @route   POST /api/users/login
 // @access  Public
@@ -58,7 +58,7 @@ const registerUser = asyncHandler(async(req, res) => {
         res.status(400)
         throw new Error("Invalid user data")
     }
-}) 
+})
 
 // @desc    Get user profile
 // @route   GET /api/users/profile
@@ -118,6 +118,8 @@ const getUsers = asyncHandler(async(req, res) => {
 
 })
 
+
+
 // @desc    Delete user
 // @route   DELETE /api/users/:id
 // @access  Private/Admin
@@ -146,6 +148,7 @@ const getUserById = asyncHandler(async(req, res) => {
         throw new Error("User not Found")
     }
 })
+
 // @desc    Update user 
 // @route   PUT /api/users/:id
 // @access  private/Admin
