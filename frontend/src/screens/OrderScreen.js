@@ -9,7 +9,7 @@ import Loader from '../components/Loader'
 import { getOrderDetails, payOrder } from '../store/actions/orderActions'
 import { ORDER_PAY_RESET } from "../store/constants/orderConstants"
  
-const PlaceOrderScreen = ({ match }) => {
+const OrderScreen = ({ match }) => {
     const orderId = match.params.id
 
     const [sdkReady, setSdkReady ] = useState(false)
@@ -190,4 +190,4 @@ const successPaymentHandler = (paymentResult) => {
     </>
 }
 
-export default PlaceOrderScreen
+export default OrderScreen
