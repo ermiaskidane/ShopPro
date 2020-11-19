@@ -1,3 +1,4 @@
+import path from "path"
 import express from "express"
 import dotenv from "dotenv"
 import colors from "colors"
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 app.use("/api/products", productRoutes)
 app.use("/api/users", userRoutes)
 app.use("/api/orders", orderRoutes)
+app.use("/api/upload", uploadRoutes)
 
 app.get('/api/config/paypal', (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
@@ -32,6 +34,7 @@ app.get('/api/config/paypal', (req, res) =>
 
 const __dirname = path.resolve() // c/z we use ES6 module we need to mimic
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")))
+
 
 // // Custom Error Handler for Routes does not exist
 app.use(notFound);
