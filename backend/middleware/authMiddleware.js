@@ -29,9 +29,6 @@ const protect = asyncHandler(async (req, res, next) => {
     }
 })
 
-<<<<<<< HEAD
-export { protect }
-=======
 const admin = (req, res, next) => {
     if(req.user && req.user.isAdmin){
         next()
@@ -42,4 +39,3 @@ const admin = (req, res, next) => {
 }
 
 export { protect, admin }
->>>>>>> 09checkout2AndAdminPart1
