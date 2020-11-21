@@ -1,5 +1,5 @@
-import axios from "axios" 
-import {  
+import axios from "axios"  
+import { 
   USER_DETAILS_FAIL,
   USER_DETAILS_REQUEST,
   USER_DETAILS_SUCCESS,
