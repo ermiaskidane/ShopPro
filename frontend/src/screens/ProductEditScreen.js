@@ -90,7 +90,7 @@ const ProductEditScreen = ({ match, history }) => {
       })
     )
   }
-  
+
   return (
     <>
       <Link to='/admin/productlist' className='btn btn-light my-3'>
@@ -191,6 +191,6 @@ const ProductEditScreen = ({ match, history }) => {
       </FormContainer>
     </>
   )
-  }
-  
-  export default ProductEditScreen
+}
+
+export default ProductEditScreen
