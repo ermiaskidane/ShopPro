@@ -41,20 +41,15 @@ const shippingAddressFromStorage = localStorage.getItem("shippingAddress") ?
     JSON.parse(localStorage.getItem("shippingAddress")) : {}
  
 const initialState = {
-<<<<<<< HEAD
-<<<<<<< HEAD
     cart: { cartItems: cartItemsFromStorage }
 =======
     cart: { cartItems: cartItemsFromStorage},
     userLogin: { userInfo: userInfoFromStorage }
->>>>>>> 07AuthFrontEnd
-=======
     cart: { 
         cartItems: cartItemsFromStorage, 
         shippingAddress: shippingAddressFromStorage 
     },
-    userLogin: { userInfo: userInfoFromStorage },
->>>>>>> 08checkout1
+    userLogin: { userInfo: userInfoFromStorage }
 }
 
 const middleware = [thunk]
