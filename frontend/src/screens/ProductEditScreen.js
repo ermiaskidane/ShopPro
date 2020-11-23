@@ -67,6 +67,9 @@ const ProductEditScreen = ({ match, history }) => {
 
       const { data } = await axios.post('/api/upload', formData, config)
 
+      // this line of code is for aws s3 
+      // const { data: {buffer} } = await axios.post('/api/img/upload', formData, config)
+
       setImage(data)
       setUploading(false)
     } catch (error) {
