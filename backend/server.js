@@ -17,6 +17,10 @@ connectDB()
 
 const app = express()
 
+if(process.env.NODE_ENV === "development"){
+  app.use(morgan("dev"))
+}
+
 // to access json format in the req.body
 app.use(express.json())
 
