@@ -124,4 +124,4 @@ const createProductReview = asyncHandler(async(req, res) => {
          throw new Error("Product not Found")
 }
 
-export { getProducts, getProductById, deleteProduct, createProduct, updateProduct}
+export { getProducts, getProductById, deleteProduct, createProduct, updateProduct, createProductReview}
