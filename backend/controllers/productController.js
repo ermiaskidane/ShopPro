@@ -111,4 +111,17 @@ const updateProduct = asyncHandler(async(req, res) => {
     }
 })
 
+// @desc    Create new product
+// @route   POST /api/products/:id/reviews
+// @access  Private
+const createProductReview = asyncHandler(async(req, res) => {
+    const { rating, comment } = req.body
+ 
+     const product = await Product.findById(req.params.id)
+     res.status(201).json({message: "Review added"})
+  } else {
+         res.status(404)
+         throw new Error("Product not Found")
+}
+
 export { getProducts, getProductById, deleteProduct, createProduct, updateProduct}
