@@ -1,5 +1,5 @@
 import axios from "axios"
-import {
+import { 
     PRODUCT_LIST_REQUEST,
     PRODUCT_LIST_SUCCESS,
     PRODUCT_LIST_FAIL,
@@ -27,7 +27,7 @@ import {
 export const listProducts = (keyword = "", pageNumber = "") => async (dispatch) => {
     try{
         dispatch({ type: PRODUCT_LIST_REQUEST })
-
+ 
         const { data } = await axios.get(`/api/products?keyword=${keyword}&pageNumber=${pageNumber}`)
  
         console.log(data)
