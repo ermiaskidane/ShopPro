@@ -11,7 +11,7 @@ import {
   createProduct,
 } from '../store/actions/productActions'
 import { PRODUCT_CREATE_RESET } from '../store/constants/productConstants'
- 
+
 const ProductListScreen = ({ history, match }) => {
   const pageNumber = match.params.pageNumber || 1
 
@@ -48,7 +48,7 @@ const ProductListScreen = ({ history, match }) => {
     if (successCreate) {
       history.push(`/admin/product/${createdProduct._id}/edit`)
     } else {
-      dispatch(listProducts("", pageNumber))
+      dispatch(listProducts('', pageNumber))
     }
   }, [
     dispatch,

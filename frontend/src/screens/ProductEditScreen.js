@@ -6,7 +6,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
-import { listProductDetails, updateProduct } from '../store/actions/productActions'
+import {
+  listProductDetails,
+  updateProduct,
+} from '../store/actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../store/constants/productConstants'
 
 const ProductEditScreen = ({ match, history }) => {
@@ -67,7 +70,7 @@ const ProductEditScreen = ({ match, history }) => {
 
       const { data } = await axios.post('/api/upload', formData, config)
 
-      // this line of code is for aws s3 
+      // this line of code is for aws s3
       // const { data: {buffer} } = await axios.post('/api/img/upload', formData, config)
 
       setImage(data)
